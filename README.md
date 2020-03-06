@@ -20,7 +20,7 @@ alias tmsu-docker='docker run \
                   --device /dev/fuse \
                   --cap-add SYS_ADMIN \
                   --security-opt apparmor:unconfined \
-                  -v $(pwd):/working tmsu:0.7.5 \
+                  -v $(pwd):/working tmsu:0.7.5-buster \
                   /bin/bash'
 ```
 
@@ -32,7 +32,7 @@ alias tmsu-docker='docker run \
 
 #### Build any version of TMSU.
 
-`make build TMSU_VERSION=$version`
+`make build TMSU_VERSION=$VERSION`
 
 #### Enter the tmsu-docker container.
 
@@ -42,7 +42,7 @@ docker run \
 --device /dev/fuse \
 --cap-add SYS_ADMIN \
 --security-opt apparmor:unconfined \
--v $(pwd):/working tmsu:$version \
+-v $(pwd):/working tmsu:$VERSION-buster \
 /bin/bash'
 ```
 
