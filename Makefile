@@ -1,5 +1,8 @@
 build:
-		@echo "BUILD $(VERSION)"
-		./dockerfile.sh $(VERSION) >> dockerfile.make
+		@echo "Build TMSU v$(TMSU_VERSION)."
+		./dockerfile.sh $(TMSU_VERSION) >> dockerfile.make
 
-.PHONY: build
+clean:
+		rm dockerfile.make
+
+.PHONY: build clean
