@@ -1,10 +1,10 @@
 # TMSU Docker
 
-Install.
+Build.
 
 ```
 git clone http://github.com/7db9a/tmsu-docker
-make build VERSION=0.7.5
+make build TMSU_VERSION=0.7.5
 ```
 
 Enter container.
