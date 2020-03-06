@@ -3,7 +3,8 @@
 #define parameters which are passed in.
 VERSION=$1
 #define the template.
-cat  << EOF
+echo "building version $VERSION"
+cat  << EOM
 FROM golang:1.14.0-buster
 RUN apt-get update && apt-get install -y \\
         fuse \\
@@ -16,4 +17,4 @@ RUN git clone -b $VERSION https://github.com/oniony/TMSU.git /TMSU
 WORKDIR /TMSU
 RUN make && make install
 WORKDIR /working
-EOF
+EOM
