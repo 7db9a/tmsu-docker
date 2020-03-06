@@ -1,5 +1,7 @@
 # TMSU Docker
 
+## Quick start
+
 Build.
 
 ```
@@ -8,7 +10,29 @@ chmod +x dockerfile.sh
 make build TMSU_VERSION=0.7.5
 ```
 
-Enter container.
+Alias.
+
+```
+alias tmsu-docker='docker run \
+                  -it \
+                  --device /dev/fuse \
+                  --cap-add SYS_ADMIN \
+                  --security-opt apparmor:unconfined \
+                  -v $(pwd):/working tmsu:0.7.5 \
+                  /bin/bash'
+```
+
+Use.
+
+`tmsu-docker`
+
+## Usage
+
+#### Build any version of TMSU.
+
+`make build TMSU_VERSION=$VERSION`
+
+#### Enter the tmsu-docker container.
 
 ```
 docker run \
@@ -17,7 +41,11 @@ docker run \
 --cap-add SYS_ADMIN \
 --security-opt apparmor:unconfined \
 -v $(pwd):/working tmsu:0.7.5 \
-/bin/bash
+/bin/bash'
 ```
 
 The options device, cap-add, and security-opt are to make docker work with FUSE, which enables `tmsu mount`.
+
+#### TMSU quick tour
+
+https://tmsu.org/
