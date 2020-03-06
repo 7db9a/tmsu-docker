@@ -1,5 +1,7 @@
 # TMSU Docker
 
+Build TMSU from source and run it in a docker container.
+
 ## Quick start
 
 #### Build
