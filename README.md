@@ -4,6 +4,7 @@ Build.
 
 ```
 git clone http://github.com/7db9a/tmsu-docker
+chmod +x dockerfile.sh
 make build TMSU_VERSION=0.7.5
 ```
 
