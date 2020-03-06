@@ -43,7 +43,7 @@ docker run \
 --cap-add SYS_ADMIN \
 --security-opt apparmor:unconfined \
 -v $(pwd):/working tmsu:$VERSION-buster \
-/bin/bash'
+/bin/bash
 ```
 
 The options device, cap-add, and security-opt are to make docker work with FUSE, which enables `tmsu mount`.
