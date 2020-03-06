@@ -15,7 +15,7 @@ docker run \
 --device /dev/fuse \
 --cap-add SYS_ADMIN \
 --security-opt apparmor:unconfined \
--v $(pwd):/working tmsu:0.7.5
+-v $(pwd):/working tmsu:0.7.5 \
 /bin/bash
 ```
 
