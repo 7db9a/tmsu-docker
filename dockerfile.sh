@@ -1,8 +1,6 @@
 #!/bin/sh
 
-#define parameters which are passed in.
 VERSION=$1
-#define the template.
 cat  << EOM
 FROM golang:1.14.0-buster
 RUN apt-get update && apt-get install -y \\
@@ -15,5 +13,4 @@ RUN go env -w GOPATH=\$HOME/go && \\
 RUN git clone -b v$VERSION https://github.com/oniony/TMSU.git /TMSU
 WORKDIR /TMSU
 RUN make && make install
-WORKDIR /working
 EOM
