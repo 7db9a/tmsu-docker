@@ -4,7 +4,7 @@ Install.
 
 ```
 git clone http://github.com/7db9a/tmsu-docker
-docker build -t tmsu:0.7.5 tmsu-docker
+make build VERSION=0.7.5
 ```
 
 Enter container.
