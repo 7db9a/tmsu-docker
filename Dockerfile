@@ -9,4 +9,3 @@ RUN go env -w GOPATH=$HOME/go && \
 RUN git clone -b v0.7.5 https://github.com/oniony/TMSU.git /TMSU
 WORKDIR /TMSU
 RUN make && make install
-WORKDIR /working
