@@ -8,8 +8,7 @@ Build TMSU from source and use it from a docker container.
 
 ```
 git clone http://github.com/7db9a/tmsu-docker
-cd tmsu-docker && chmod +x dockerfile.sh
-make TMSU_VERSION=0.7.5
+cd tmsu-docker && make TMSU_VERSION=0.7.5
 ```
 
 #### Alias
