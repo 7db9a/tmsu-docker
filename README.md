@@ -8,7 +8,7 @@ Build TMSU from source and run it in a docker container.
 
 ```
 git clone http://github.com/7db9a/tmsu-docker
-chmod +x dockerfile.sh
+cd tmsu-docker && chmod +x dockerfile.sh
 make build TMSU_VERSION=0.7.5
 ```
 
@@ -32,7 +32,7 @@ alias tmsu-docker='docker run \
 
 #### Build any version of TMSU.
 
-`make build TMSU_VERSION=$VERSION`
+`make build TMSU_VERSION=$version`
 
 #### Enter the tmsu-docker container.
 
@@ -42,7 +42,7 @@ docker run \
 --device /dev/fuse \
 --cap-add SYS_ADMIN \
 --security-opt apparmor:unconfined \
--v $(pwd):/working tmsu:0.7.5 \
+-v $(pwd):/working tmsu:$version \
 /bin/bash'
 ```
 
